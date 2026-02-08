@@ -18,11 +18,16 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "archive.html", title: Home Change, sidebaricon: home}
+  - {file: "archive.html", title: Home, sidebaricon: home}
   - {file: "README.md", title: About, sidebaricon: address-card}
+  - {file: "projects.md", tite: Projects, sidebaricon: seedling}
+  - {file: "teaching.md", title: Teaching, sidebaricon: chalkboard-teacher}
+  - {file: "blog.md", title: Blog, sidebaricon: typewriter}
+  - {file: "resume.pdf", title: Download Resume, sidebaricon: briefcase}
+  
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
-  - {title: Mail, icon: envelope, url: "mailto:vkarthikeyan@stanford.edu"}
+  - {title: Email, icon: envelope, url: "mailto:vkarthikeyan@stanford.edu"}
   - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/viswajeeth-karthikeyan/"}
 
