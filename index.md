@@ -1,4 +1,8 @@
+---
+layout: page
+title: Home
 permalink: /
+---
 
 B.S. in Computer Science
 Minor in Public Policy
