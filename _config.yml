@@ -18,9 +18,9 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {url: "https://vish-karthikeyan.github.io", file: "homepage.md", title: Home, sidebaricon: home}
+  - {file: "homepage.md", title: Home, sidebaricon: home}
   - {file: "README.md", title: About, sidebaricon: address-card}
-  - {file: "projects.md", tite: Projects, sidebaricon: seedling}
+  - {file: "projects.md", title: Projects, sidebaricon: seedling}
   - {file: "teaching.md", title: Teaching, sidebaricon: chalkboard-teacher}
   - {file: "blog.md", title: Blog, sidebaricon: typewriter}
   - {file: "resume.pdf", title: Download Resume, sidebaricon: briefcase}
@@ -28,7 +28,7 @@ navigation:                     # accepts {file, title, url, icon, sidebaricon}
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Email, icon: envelope, url: "mailto:vkarthikeyan@stanford.edu"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
+  - {title: Github, icon: github, url: "https://github.com/vish-karthikeyan"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/viswajeeth-karthikeyan/"}
 
 comments:
