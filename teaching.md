@@ -6,6 +6,8 @@ permalink: /teaching/
 
 **EDUC 193A (Fall ‘25, Winter ‘26)**
 
+![Bridge Peer Counseling Center](/assets/images/bridge.JPG)
+
 Amidst a surge in institutional disillusionment, pathological uncertainty and existential dread across the world, unmet mental health needs remain at an all time high. At [the Bridge Peer Counseling Center](https://web.stanford.edu/group/bridge/), we strive to do best what friends can do—listen. When traditional mental health resources fail to meet the moment for whatever reason, peer counseling offers something fundamentally different—the simple yet profound act of being heard by another human being. 
 
 Stanford students from all disciplines and years take EDUC 193A: the first class in a series of two that trains them to be effective peer counselors and to make the Bridge available 24/7 to the entire community. One of the most meaningful aspects of serving as a section leader was supporting students as they learned to hold real vulnerability. However, the most rewarding moment was not when a section went carefully as planned beforehand, but when I met them as fellow staffers at our first all-staff meeting of the quarter! 
