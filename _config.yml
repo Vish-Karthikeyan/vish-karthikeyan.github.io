@@ -18,7 +18,7 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "archive.html", title: Home, sidebaricon: home}
+  - {url: "https://vish-karthikeyan.github.io", file: "homepage.md", title: Home, sidebaricon: home}
   - {file: "README.md", title: About, sidebaricon: address-card}
   - {file: "projects.md", tite: Projects, sidebaricon: seedling}
   - {file: "teaching.md", title: Teaching, sidebaricon: chalkboard-teacher}
