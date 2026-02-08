@@ -1,3 +1,9 @@
+---
+layout: page
+title: Teaching
+permalink: /teaching/
+---
+
 **EDUC 193A (Fall ‘25, Winter ‘26)**
 
 Amidst a surge in institutional disillusionment, pathological uncertainty and existential dread across the world, unmet mental health needs remain at an all time high. At [the Bridge Peer Counseling Center](https://web.stanford.edu/group/bridge/), we strive to do best what friends can do—listen. When traditional mental health resources fail to meet the moment for whatever reason, peer counseling offers something fundamentally different—the simple yet profound act of being heard by another human being. 

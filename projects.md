@@ -1,3 +1,9 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
 **Is AI as Racist as We Think? Contextualizing Bias in Human and Large Language Model Criminal Judgments**
 *(2025; ongoing)*
 

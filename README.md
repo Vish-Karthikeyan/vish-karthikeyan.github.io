@@ -1,3 +1,9 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
 Hello, I am Viswajeeth (Vish) Karthikeyan. My name literally means “conqueror of the universe” in Sanskrit (विश्वजित्), but so far the only thing I have conquered (with significant collateral damage) is a solid foundation in computer science, economics and political science at one of the world’s leading universities. 
 
 I’m officially a CS major on the theory track (yes, we exist) with a minor in Public Policy, but my interests broadly include statistical learning, natural language processing, complexity theory, public decision-making, constructive dialogue, and education. You can look at my current research work here, and my teaching here. 

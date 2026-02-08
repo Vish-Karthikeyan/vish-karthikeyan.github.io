@@ -3,6 +3,7 @@ author: "Vish Karthikeyan"
 description: "Stanford University | Department of Computer Science | Department of Public Policy"
 permalink: /:title/
 lang: "en"
+encoding: "utf-8"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
@@ -18,12 +19,12 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "homepage.md", title: Home, sidebaricon: home}
+  - {file: "index.html", title: Home, sidebaricon: home}
   - {file: "README.md", title: About, sidebaricon: address-card}
   - {file: "projects.md", title: Projects, sidebaricon: seedling}
   - {file: "teaching.md", title: Teaching, sidebaricon: chalkboard-teacher}
   - {file: "blog.md", title: Blog, sidebaricon: typewriter}
-  - {file: "resume.pdf", title: Download Resume, sidebaricon: briefcase}
+  - {title: Download Resume, url: "/resume.pdf", sidebaricon: briefcase}
   
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
