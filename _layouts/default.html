@@ -5,13 +5,20 @@
 
 <header class="hover smooth">
   {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}" target="_blank" rel="noopener noreferrer">{{ site.title | escape }}</a></h1>
   {% endunless %}
   {% include menu.html menu=site.navigation %}
   {% include menu.html menu=site.external %}
 </header>
 
 {{ content }}
+
+<script>
+  document.querySelectorAll('a[href]:not([target])').forEach(function(a) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>
 
 {%- if site.footer -%}
 <footer class="hover">
