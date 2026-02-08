@@ -1,6 +1,6 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "My blog"
+title: "Vish Karthikeyan"
+author: "Vish Karthikeyan"
+description: "Stanford University | Department of Computer Science | Department of Public Policy"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
