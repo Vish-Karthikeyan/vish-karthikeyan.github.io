@@ -16,6 +16,7 @@ LLM-based coding agents frequently hallucinate incorrect APIs, nonexistent files
 
 **Provable Limits of Expressivity of Transformers**
 *(2026; ongoing; final project for CS 254: Complexity Theory)*
+
 What is the circuit complexity of the functions computed by transformer encoders and decoders? How do different attention mechanisms (hard vs. soft, unique vs. averaged) affect expressiveness? Which formal language classes can transformers recognize? What is the relationship between transformer depth (fixed vs. O(log n)) and recognized language classes?
 What tasks are provably impossible for transformers under standard complexity assumptions? What impossibility results hold unconditionally (e.g., via diagonalization, learning theory)? How do average-case vs. worst-case considerations explain the gap between empirical success and theoretical limitations?
 
