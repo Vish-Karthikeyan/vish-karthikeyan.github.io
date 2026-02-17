@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-![Vish Karthikeyan](/assets/images/self.JPG)
+<p align="center">
+  <img src="/assets/images/self.JPG" alt="Vish Karthikeyan" width="220">
+</p>
 
 Hello, I am Viswajeeth (Vish) Karthikeyan. My name literally means “conqueror of the universe” in Sanskrit (विश्वजित्), but so far the only thing I have conquered (with significant collateral damage) is a solid foundation in computer science, economics and political science at one of the world’s leading universities. 
 
