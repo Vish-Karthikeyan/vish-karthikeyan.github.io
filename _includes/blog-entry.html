@@ -1,0 +1,43 @@
+<article class="blog-entry">
+  <div class="blog-meta">{{ include.entry.publication }} • {{ include.entry.date }}</div>
+
+  <h2>{{ include.entry.title }}</h2>
+
+  {% if include.entry.section %}
+    <p><strong>{{ include.entry.section }}</strong></p>
+  {% endif %}
+
+  {% if include.entry.notes %}
+    <div class="blog-notes">
+      <strong>My notes</strong>
+      <p>{{ include.entry.notes }}</p>
+    </div>
+  {% endif %}
+
+  {% if include.entry.embed %}
+    <div class="instagram-embed-wrap">
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="{{ include.entry.instagram_url }}"
+        data-instgrm-version="14"
+        style="max-width:540px; width:100%;">
+      </blockquote>
+    </div>
+  {% endif %}
+
+  <div class="blog-links">
+    <a class="blog-button"
+       href="{{ include.entry.article_url }}"
+       target="_blank"
+       rel="noopener">
+       Read op-ed
+    </a>
+
+    <a class="blog-button"
+       href="{{ include.entry.instagram_url }}"
+       target="_blank"
+       rel="noopener">
+       View Instagram post
+    </a>
+  </div>
+</article>
