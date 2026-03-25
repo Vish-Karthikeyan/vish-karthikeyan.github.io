@@ -4,19 +4,117 @@ title: Projects
 permalink: /projects/
 ---
 
-**Is AI as Racist as We Think? Contextualizing Bias in Human and Large Language Model Criminal Judgments**
-*(2025; ongoing)*
+<style>
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-A matched-guise experimental design to compare professional human judgments and commercially available LLMs on identical decision-making tasks, with a focus on assessing criminal guilt and sentencing severity from controlled case descriptions to examine how linguistic cues shape divergence in reasoning across biological and probabilistic models
+.project-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
 
-**Learning When to Ask: Reducing Hallucinations in LLM Coding Agents**
-*(2026; ongoing; final project for CS 229: Machine Learning)*
+.project-subtitle {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 15px;
+}
 
-LLM-based coding agents frequently hallucinate incorrect APIs, nonexistent files, or invalid logic when operating under incomplete context. This project frames tool usage as a decision-making problem under uncertainty, training agents to learn when to request additional information rather than guess. Using supervised and reinforcement learning approaches grounded in uncertainty signals, the goal is to reduce hallucinations while preserving task efficiency in real-world programming environments.
+.project-abstract {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
 
-**Provable Limits of Expressivity of Transformers**
-*(2026; ongoing; final project for CS 254: Complexity Theory)*
+.project-media {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-What is the circuit complexity of the functions computed by transformer encoders and decoders? How do different attention mechanisms (hard vs. soft, unique vs. averaged) affect expressiveness? Which formal language classes can transformers recognize? What is the relationship between transformer depth (fixed vs. O(log n)) and recognized language classes?
-What tasks are provably impossible for transformers under standard complexity assumptions? What impossibility results hold unconditionally (e.g., via diagonalization, learning theory)? How do average-case vs. worst-case considerations explain the gap between empirical success and theoretical limitations?
+.project-media embed {
+  border-radius: 8px;
+}
+</style>
+
+---
+
+<div class="project-card">
+
+<div class="project-title">
+GRAB: GRounding-based, Repository-Aware Boolean Gate — Reducing Hallucinations via Tool Usage Awareness in LLM-based Coding Agents
+</div>
+
+<div class="project-subtitle">
+(Final project for CS 229: Machine Learning)
+</div>
+
+<div class="project-abstract">
+Large language model (LLM)-based coding agents frequently hallucinate implementation details such as incorrect API calls, nonexistent file paths, and fabricated configuration keys. These failures arise when the agent attempts to act under an incomplete context window instead of explicitly requesting missing information via tools.
+
+We study tool use awareness for coding agents: given a prompt, a draft code snippet, and repository context, should the agent invoke an information-gathering tool or proceed without one? We frame this as a supervised classification problem over a repository-level hallucination feature vector and train a constrained XGBoost classifier, GRAB (GRounding-based, Repository-Aware Boolean gate), to gate tool calls within an iterative refinement loop.
+
+On SWE-bench Verified, GRAB reduces hallucination rate from ~50–69% baselines to 44%, while maintaining optimal tool efficiency.
+</div>
+
+<div class="project-media">
+  <embed src="/assets/projects/GRAB.pdf" type="application/pdf" width="300px" height="200px" />
+  <embed src="/assets/projects/GRAB_poster.pdf" type="application/pdf" width="300px" height="200px" />
+</div>
+
+</div>
+
+---
+
+<div class="project-card">
+
+<div class="project-title">
+Provable Limits of Expressivity of Transformers
+</div>
+
+<div class="project-subtitle">
+2026 — ongoing · Final project for CS 254: Complexity Theory
+</div>
+
+<div class="project-abstract">
+This project investigates the circuit complexity of functions computed by transformer architectures and the formal language classes they can recognize.
+
+We analyze how attention mechanisms (hard vs. soft, unique vs. averaged) influence expressivity, and how transformer depth (fixed vs. O(log n)) affects computational power. The work explores both unconditional impossibility results and limits under standard complexity assumptions, aiming to bridge the gap between theoretical constraints and empirical success.
+</div>
+
+<div class="project-media">
+  <embed src="CS_254_Final_Report.pdf" type="application/pdf" width="300px" height="200px" />
+</div>
+
+</div>
+
+---
+
+<div class="project-card">
+
+<div class="project-title">
+Is AI as Racist as We Think? Contextualizing Bias in Human and LLM Criminal Judgments
+</div>
+
+<div class="project-subtitle">
+2025 — ongoing
+</div>
+
+<div class="project-abstract">
+This project uses a matched-guise experimental design to compare professional human judgments and commercially available LLMs on identical decision-making tasks. The focus is on criminal guilt and sentencing severity derived from controlled case descriptions.
+
+The study isolates how linguistic cues shape divergence in reasoning across biological and probabilistic systems, offering insight into how bias manifests differently in humans versus models.
+</div>
+
+<div class="project-media">
+  <!-- Add files when available -->
+  <!-- <embed src="bias_paper.pdf" width="300px" height="200px" /> -->
+  <!-- <embed src="bias_poster.pdf" width="300px" height="200px" /> -->
+</div>
+
+</div>
 
