@@ -1,43 +1,43 @@
 <article class="blog-entry">
-  <div class="blog-meta">{{ include.entry.publication }} • {{ include.entry.date }}</div>
+  <div class="blog-meta">
+    {{ include.article.outlet }} • {{ include.article.date }}
+  </div>
 
-  <h2>{{ include.entry.title }}</h2>
+  <h2>{{ include.article.name }}</h2>
 
-  {% if include.entry.section %}
-    <p><strong>{{ include.entry.section }}</strong></p>
-  {% endif %}
-
-  {% if include.entry.notes %}
-    <div class="blog-notes">
-      <strong>My notes</strong>
-      <p>{{ include.entry.notes }}</p>
+  {% if include.article.subtitle %}
+    <div class="blog-subtitle">
+      {{ include.article.subtitle }}
     </div>
   {% endif %}
 
-  {% if include.entry.embed %}
+  {% if include.article.instagram %}
+    <div class="blog-notes">
+      {{ include.article.instagram }}
+    </div>
+  {% endif %}
+
+  {% if include.article.instagram_link %}
     <div class="instagram-embed-wrap">
       <blockquote
         class="instagram-media"
-        data-instgrm-permalink="{{ include.entry.instagram_url }}"
-        data-instgrm-version="14"
-        style="max-width:540px; width:100%;">
+        data-instgrm-permalink="{{ include.article.instagram_link }}"
+        data-instgrm-version="14">
       </blockquote>
     </div>
   {% endif %}
 
   <div class="blog-links">
-    <a class="blog-button"
-       href="{{ include.entry.article_url }}"
-       target="_blank"
-       rel="noopener">
-       Read op-ed
-    </a>
+    {% if include.article.article_link %}
+      <a class="blog-button" href="{{ include.article.article_link }}" target="_blank" rel="noopener">
+        Read article
+      </a>
+    {% endif %}
 
-    <a class="blog-button"
-       href="{{ include.entry.instagram_url }}"
-       target="_blank"
-       rel="noopener">
-       View Instagram post
-    </a>
+    {% if include.article.instagram_link %}
+      <a class="blog-button" href="{{ include.article.instagram_link }}" target="_blank" rel="noopener">
+        View Instagram post
+      </a>
+    {% endif %}
   </div>
 </article>
