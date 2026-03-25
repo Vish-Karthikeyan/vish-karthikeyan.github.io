@@ -6,39 +6,49 @@ permalink: /blog/
 
 <style>
 .blog-wrapper {
-  max-width: 820px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .blog-hero {
   text-align: center;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 2.75rem auto;
 }
 
 .blog-hero p {
-  max-width: 640px;
+  max-width: 760px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
-.blog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.blog-section-block {
+  margin-top: 2.5rem;
+}
+
+.blog-section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
 }
 
 .blog-entry {
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 18px;
   padding: 1.25rem;
-  max-width: 760px;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .blog-entry h2 {
   margin-top: 0.4rem;
   margin-bottom: 0.75rem;
-  font-size: 2rem;
-  line-height: 1.25;
+  font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 .blog-meta {
@@ -95,7 +105,7 @@ permalink: /blog/
 
 @media (max-width: 640px) {
   .blog-entry h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .instagram-embed-wrap,
@@ -105,13 +115,36 @@ permalink: /blog/
 }
 </style>
 
-Musings on computer science, language, and politics!
+<div class="blog-wrapper">
 
-  <section class="blog-list">
-    {% for entry in site.data.blog_entries.entries %}
-      {% include blog-entry.html entry=entry %}
-    {% endfor %}
+  <div class="blog-hero">
+    <p>
+      Musings on computer science, language, and politics. Right now, for the Stanford Political Review, I am working on a series of op-eds titled <em>Humanity’s Most Important Arguments: 4 Ideas that Matter for AI Policy</em>. The first issue, <em>To Regulate or Not to Regulate</em>, is coming soon.
+    </p>
+  </div>
+
+  <section class="blog-section-block">
+    <div class="blog-section-heading">Featured</div>
+    <div class="blog-grid">
+      {% for entry in site.data.blog_entries.entries %}
+        {% if entry.featured == true %}
+          {% include blog-entry.html entry=entry %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </section>
+
+  <section class="blog-section-block">
+    <div class="blog-section-heading">All</div>
+    <div class="blog-grid">
+      {% for entry in site.data.blog_entries.entries %}
+        {% unless entry.featured == true %}
+          {% include blog-entry.html entry=entry %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
+
 </div>
 
 <script async src="//www.instagram.com/embed.js"></script>
