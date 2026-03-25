@@ -117,7 +117,7 @@ permalink: /projects/
 
   <div class="project-links">
     <a class="project-button" href="{{ '/assets/projects/GRAB.pdf' | relative_url }}" target="_blank" rel="noopener">Open report in new window</a>
-    <a class="project-button" href="{{ '/assets/projects/GRAB_poster.pdf' | relative_url }}" target="_blank" rel="noopener">Open poster in new window</a>
+    <a class="project-button" href="{{ '/assets/projects/GRAB_poster.png' | relative_url }}" target="_blank" rel="noopener">Open poster in new window</a>
   </div>
 
   <div class="project-media-grid">
@@ -128,10 +128,10 @@ permalink: /projects/
       </div>
     </div>
 
-    <div class="media-card">
-      <div class="media-label">Poster preview</div>
+  <div class="media-card">
+    <div class="media-label">Poster preview</div>
       <div class="media-frame">
-        <iframe src="{{ '/assets/projects/GRAB_poster.pdf' | relative_url }}"></iframe>
+        <iframe src="{{ '/assets/projects/GRAB_poster.png' | relative_url }}"></iframe>
       </div>
     </div>
   </div>
