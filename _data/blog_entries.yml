@@ -1,10 +1,18 @@
-entries:
-  - section: "The Stanford Political Review"
-    title: "The Need for a Universal Minimum Age for Gender-Affirming Surgery"
-    publication: "Stanford Political Review"
+articles:
+  - name: "To Regulate or Not to Regulate"
+    subtitle: "Humanity’s Most Important Arguments: 4 Ideas that Matter for AI Policy"
+    featured: true
+    outlet: "Stanford Political Review"
+    date: "Coming soon"
+    instagram: "The opening essay in my AI policy series examines the question that structures much of the current debate: whether regulation is a brake on innovation or a necessary condition for legitimacy, safety, and durable public trust."
+    article_link: ""
+    instagram_link: ""
+
+  - name: "The Need for a Universal Minimum Age for Gender-Affirming Surgery"
+    subtitle: "The Stanford Political Review"
+    featured: false
+    outlet: "Stanford Political Review"
     date: "March 10, 2026"
-    instagram_url: "https://www.instagram.com/p/DVt4KMDEp_j/"
-    article_url: "https://stanfordpoliticalreview.org/2026/03/10/the-need-for-a-universal-minimum-age-for-gender-affirming-surgery/"
-    notes: >
-      In this piece, I examine whether a universal minimum age could provide a more consistent legal and ethical baseline for gender-affirming surgery. I was especially interested in the tension between individual autonomy, medical discretion, and the state's role in setting uniform thresholds.
-    embed: true
+    instagram: "In this piece, I examine whether a universal minimum age could provide a more consistent legal and ethical baseline for gender-affirming surgery. I was especially interested in the tension between individual autonomy, medical discretion, and the state's role in setting uniform thresholds."
+    article_link: "https://stanfordpolitics.org/your-article-link-here"
+    instagram_link: "https://www.instagram.com/p/YOUR-INSTAGRAM-POST-ID/"
