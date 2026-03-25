@@ -143,13 +143,11 @@ permalink: /projects/
   </div>
 
   <div class="project-subtitle">
-    2026 — ongoing · Final project for CS 254: Complexity Theory
+    Final project for CS 254: Complexity Theory
   </div>
 
   <div class="project-abstract">
-    This project investigates the circuit complexity of functions computed by transformer architectures and the formal language classes they can recognize.
-    <br><br>
-    We analyze how attention mechanisms, including hard versus soft attention and unique versus averaged attention, influence expressivity, and how transformer depth, including fixed depth versus O(log n), affects computational power.
+    In this report, I characterize the fundamental limits of transformer-based language models, showing that their constant-depth architecture (TC0) restricts their ability to perform sequential and compositional reasoning, fails on key language structures, and makes hallucination inevitable. These results provide a formal account of transformer limitations while highlighting the tension between theory and their strong empirical performance.   
   </div>
 
   <div class="project-links">
