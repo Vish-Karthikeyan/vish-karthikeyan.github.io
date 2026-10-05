@@ -1,0 +1,26 @@
+---
+layout: page
+title: Reading
+permalink: /reading/
+noindex: true
+sitemap: false
+# Hidden page: linked only from the home-page bio. Content lives in _data/reading.yml
+---
+{% assign data = site.data.reading %}
+<p class="page-lede">{{ data.intro }}</p>
+
+{% if data.themes and data.themes.size > 0 %}
+{% for t in data.themes %}
+<h2 class="sec">{{ t.name }}</h2>
+<ul class="bib">
+  {% for b in t.books %}
+  <li>
+    <span class="title">{% if b.url %}<a href="{{ b.url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</span>, <span class="author">{{ b.author }}</span>
+    {% if b.why %}<div class="why">{{ b.why | markdownify }}</div>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% else %}
+<p class="status">The list is on its way. Check back soon.</p>
+{% endif %}

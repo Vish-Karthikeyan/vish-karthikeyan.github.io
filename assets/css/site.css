@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Vish Karthikeyan — site styles
+   Colours are Stanford's official palette (identity.stanford.edu).
+   ========================================================================== */
+
+/* ---- Fonts (self-hosted; see /assets/fonts/FONTS.txt) ------------------- */
+@font-face{font-family:"LM Roman";src:url("../fonts/lmroman10-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"LM Roman";src:url("../fonts/lmroman10-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"LM Roman";src:url("../fonts/lmroman10-bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"LM Roman";src:url("../fonts/lmroman10-bolditalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"LM Roman Caps";src:url("../fonts/lmromancaps10-regular.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"LM Roman Display";src:url("../fonts/lmroman17-regular.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Pagella";src:url("../fonts/pagella-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+
+/* ---- Palette & base ----------------------------------------------------- */
+:root{
+  --cardinal:#8C1515; --cardinal-dark:#820000;
+  --ink:#2E2D29; --grey:#53565A; --muted:#6D6C69;
+  --rule:#D5D5D4; --tint:#F4F4F4;
+  --measure:48rem;
+}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{
+  margin:0;color:var(--ink);background:#fff;
+  font-family:"LM Roman","Latin Modern Roman","Computer Modern Serif",Georgia,serif;
+  line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  border-top:5px solid var(--cardinal);
+}
+/* Fixed, centred Stanford seal watermark on every page */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:url("../images/stanford-seal.png") center/min(72vmin,34rem) no-repeat;opacity:.055;
+}
+a{color:var(--cardinal);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:1px}
+p{margin:0 0 .85rem;text-align:left}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.25rem}
+main{padding:2.25rem 0 1rem}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---- Masthead / navigation --------------------------------------------- */
+.masthead{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1.1rem 0 .7rem;border-bottom:1px solid var(--ink)}
+.masthead .site{font-weight:700;text-transform:uppercase;font-size:.98rem;letter-spacing:.09em;color:var(--cardinal)}
+.masthead .site:hover{text-decoration:none;color:var(--cardinal-dark)}
+.masthead nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1.2rem;font-family:"LM Roman Caps","LM Roman",serif;font-size:.95rem;letter-spacing:.04em}
+.masthead nav a{color:var(--ink)}
+.masthead nav a[aria-current]{color:var(--cardinal)}
+.masthead nav a.cv{color:var(--cardinal)}
+.masthead .icons{display:inline-flex;gap:.7rem;align-items:center;padding-left:.9rem;border-left:1px solid var(--rule)}
+.masthead .icons a{color:var(--ink);display:inline-flex}
+.masthead .icons a:hover{color:var(--cardinal)}
+.masthead .icons svg{display:block;transform:translateY(.08em)}
+
+/* ---- Headings ----------------------------------------------------------- */
+.page-title{font-family:"LM Roman Display","LM Roman",serif;font-weight:400;font-size:2.1rem;margin:0 0 .3rem}
+.page-lede{color:var(--grey);font-style:italic;margin:0 0 .5rem}
+h2.sec{font-weight:700;font-size:1.3rem;margin:2.4rem 0 .9rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+
+/* ---- Home: tagline, photo, affiliation cards --------------------------- */
+.tagline{
+  font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,serif;font-weight:400;
+  font-size:min(4rem, calc((100vw - 2.6rem) / 11.5));line-height:1.05;letter-spacing:-.005em;
+  white-space:nowrap;margin:.1rem 0 .9rem;color:var(--ink);
+}
+.tagline::after{content:"";display:block;width:3.5rem;height:2px;background:var(--cardinal);margin-top:.75rem}
+.roles{color:var(--grey);font-size:1.1rem;margin:0 0 1.8rem}
+.hero{display:grid;grid-template-columns:13rem 1fr;gap:2.25rem;align-items:start}
+.portrait{margin:0}
+.portrait img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
+.inst{border-left:3px solid var(--cardinal);padding:.1rem 0 .1rem 1rem;margin:0 0 1.3rem}
+.inst-logo{display:block;width:max-content;max-width:100%}
+.inst-img{display:block;max-width:100%;height:auto;margin:.15rem 0 .55rem}
+.creds{margin:0;padding:0;list-style:none;line-height:1.45;color:var(--ink);font-weight:700}
+.creds li{margin:0 0 .15rem}
+.creds a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.18em;text-decoration-thickness:1px}
+.creds a:hover{color:var(--cardinal);text-decoration-color:currentColor}
+.contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem}
+.contact-row .addr{color:var(--grey);font-size:.95rem}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.btn{display:inline-block;font-family:"LM Roman Caps","LM Roman",serif;letter-spacing:.06em;font-size:.92rem;color:var(--cardinal);border:1px solid var(--cardinal);padding:.32rem .9rem .38rem;line-height:1;background:#fff}
+.btn:hover{background:var(--cardinal);color:#fff;text-decoration:none}
+.btn.sm{font-size:.82rem;padding:.28rem .75rem .32rem}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 0}
+.card .btns.center{grid-column:1/-1;justify-content:center;margin:.1rem 0 0}
+
+/* ---- Home: updates carousel (LinkedIn embeds) --------------------------- */
+.upd-head{display:flex;justify-content:space-between;align-items:baseline;margin:2.4rem 0 .9rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+.upd-head h2{font-weight:700;font-size:1.3rem;margin:0}
+.upd-ctl button{font:inherit;font-family:"LM Roman Caps","LM Roman",serif;letter-spacing:.04em;font-size:.9rem;background:none;border:0;color:var(--cardinal);cursor:pointer;padding:0 0 0 1rem}
+.upd-ctl button:disabled{color:var(--rule);cursor:default}
+.upd-ctl button:not(:disabled):hover{text-decoration:underline;text-underline-offset:.15em}
+.upd-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((200% - 1rem)/3);gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:.2rem}
+.upd-track::-webkit-scrollbar{display:none}
+.upd-embed{scroll-snap-align:start;background:#fff;border:1px solid var(--rule);height:692px;overflow:hidden}
+.upd-embed iframe{display:block;width:100%;height:690px;border:0}
+
+/* ---- Research / Writing: boxed cards ------------------------------------ */
+.card{display:grid;grid-template-columns:10rem 1fr;gap:1.25rem;background:#fff;border:1px solid var(--rule);padding:1.1rem;margin:0 0 1rem}
+.card .thumb{width:10rem;aspect-ratio:4/3;border:1px solid var(--rule);background:var(--tint);display:block;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card .tile{width:10rem;aspect-ratio:4/3;background:var(--cardinal);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem;font-family:"LM Roman Caps","LM Roman",serif;letter-spacing:.06em;font-size:1.05rem;line-height:1.2}
+.card .tile.light{background:var(--tint);color:var(--grey);border:1px solid var(--rule)}
+.card h3{font-weight:700;font-size:1.06rem;line-height:1.35;margin:0 0 .3rem}
+.card h3 .full{font-weight:400;font-style:italic}
+.card p:last-child,.card ol:last-child,.card .current:last-child{margin-bottom:0}
+.card.sm{grid-template-columns:8rem 1fr}
+.card.sm .thumb,.card.sm .tile{width:8rem}
+.meta{color:var(--grey);font-size:.95rem;margin:0 0 .6rem}
+.meta .label{font-family:"LM Roman Caps","LM Roman",serif;letter-spacing:.04em;color:var(--ink)}
+.status{font-style:italic;color:var(--grey);font-size:.95rem}
+ol.roman{list-style:none;counter-reset:r;padding:0;margin:0 0 .85rem}
+ol.roman li{counter-increment:r;position:relative;padding-left:2.1rem;margin:0 0 .4rem}
+ol.roman li::before{content:"(" counter(r,lower-roman) ")";position:absolute;left:0;width:1.8rem;text-align:right;padding-right:.4rem}
+.current{border-left:2px solid var(--cardinal);padding:.35rem 0 .35rem .9rem;margin:.4rem 0 .6rem}
+.current .label{font-family:"LM Roman Caps","LM Roman",serif;letter-spacing:.04em;font-size:.9rem;color:var(--cardinal);display:block}
+.current .cw-desc{margin:.45rem 0 0;font-size:.95rem}
+
+/* ---- Discourse page: entries ------------------------------------------- */
+.entry{margin:0 0 1.6rem}
+.entry h3{font-weight:700;font-size:1.06rem;margin:0 0 .2rem}
+.entry h3 a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.18em;text-decoration-thickness:1px}
+.entry h3 a:hover{color:var(--cardinal);text-decoration-color:currentColor}
+.entry.media{display:grid;grid-template-columns:10rem 1fr;gap:1.25rem;align-items:start}
+.entry.media .thumb{display:block;width:10rem;aspect-ratio:4/3;border:1px solid var(--rule);overflow:hidden;background:var(--tint)}
+.entry.media .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.roles-list{list-style:none;padding:0;margin:0 0 .6rem;color:var(--grey);font-size:.95rem}
+.roles-list li{margin:0 0 .1rem}
+blockquote.pull{margin:.6rem 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:2px solid var(--rule)}
+blockquote.pull p{font-style:italic;margin:0 0 .35rem;color:var(--ink)}
+blockquote.pull footer{font-size:.88rem;color:var(--grey)}
+
+/* ---- Reading page ------------------------------------------------------- */
+.bib{list-style:none;padding:0;margin:0}
+.bib li{padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.bib li:last-child{border-bottom:0}
+.bib .title{font-weight:700}
+.bib .author{color:var(--grey)}
+.bib .why p{margin:.25rem 0 0;font-size:.95rem}
+
+/* ---- Footer ------------------------------------------------------------- */
+.site-footer{margin:3rem 0 0;padding:.8rem 0 2rem;border-top:1px solid var(--ink);font-size:.85rem;color:var(--muted)}
+
+/* ---- Small screens ------------------------------------------------------ */
+@media (max-width:640px){
+  html{font-size:17px}
+  .hero{grid-template-columns:1fr}
+  .portrait{max-width:12rem}
+  .card,.card.sm,.entry.media{grid-template-columns:1fr}
+  .card .thumb,.card .tile,.card.sm .thumb,.card.sm .tile,.entry.media .thumb{width:100%;max-width:16rem}
+  .upd-track{grid-auto-columns:82%}
+}

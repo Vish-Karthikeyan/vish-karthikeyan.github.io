@@ -1,0 +1,53 @@
+# ===========================================================================
+# WRITING PAGE  (shown at /writing/)
+#
+# Newest first: add new pieces at the TOP of the list. Copy an existing entry
+# (from its "- title:" line to the next "- title:") and edit it.
+#
+# Fields:
+#   title:   Article title.
+#   url:     Link to the article. Leave out (or "") while it's forthcoming.
+#   outlet:  Publication name (shown in italics).
+#   date:    Shown exactly as written, e.g. "June 3, 2026" or "Forthcoming".
+#   series:  (optional) e.g. "Humanity’s Most Important Argument, Installment II"
+#   image:   Thumbnail: a full URL or a repo path like
+#            /assets/images/writing/my-image.jpg
+#   blurb:   (optional) One or two sentences. Markdown allowed.
+# ===========================================================================
+
+lede: "I am a Contributing Editor at the *Stanford Political Review*, where I write broadly about AI governance."
+
+heading: "Op-Eds"
+
+articles:
+
+  - title: "All Roads Lead to Brussels"
+    url: ""
+    outlet: "The Stanford Political Review"
+    date: "Forthcoming"
+    series: "Humanity’s Most Important Argument, Installment III"
+    image: "https://static.dezeen.com/uploads/2016/12/european-union-headquarters-brussels-samyn-and-partners-architecture_dezeen_2364_col_20.jpg"
+    blurb: "An analysis of how the newly enforced EU AI Act changes the commercial AI guardrails landscape globally."
+
+  - title: "Towards Eigenemployment"
+    url: "https://stanfordpoliticalreview.org/2026/06/03/towards-eigenemployment/"
+    outlet: "The Stanford Political Review"
+    date: "June 3, 2026"
+    series: "Humanity’s Most Important Argument, Installment II"
+    image: "https://i0.wp.com/stanfordpoliticalreview.org/wp-content/uploads/2026/06/image1.gif?resize=420%2C280&ssl=1"
+    blurb: "I borrow the eigenvector from linear algebra to argue that AGI will sever the link between human labor and economic value, and I coin what survives that transformation as an “eigenemployment.”"
+
+  - title: "To Regulate or Not to Regulate"
+    url: "https://stanfordpoliticalreview.org/2026/04/01/to-regulate-or-not-to-regulate/"
+    outlet: "The Stanford Political Review"
+    date: "April 1, 2026"
+    series: "Humanity’s Most Important Argument, Installment I"
+    image: "https://i0.wp.com/stanfordpoliticalreview.org/wp-content/uploads/2026/04/image.png?resize=420%2C280&ssl=1"
+    blurb: "The opening essay in an AI-policy series rejects the regulation–innovation dichotomy and surveys the present landscape of AI regulation across the globe."
+
+  - title: "The Need for a Universal Minimum Age for Gender-Affirming Surgery"
+    url: "https://stanfordpoliticalreview.org/2026/03/10/the-need-for-a-universal-minimum-age-for-gender-affirming-surgery/"
+    outlet: "The Stanford Political Review"
+    date: "March 10, 2026"
+    image: "https://i0.wp.com/stanfordpoliticalreview.org/wp-content/uploads/2026/03/image-1.png?resize=420%2C280&ssl=1"
+    blurb: "Argues for a universal minimum age for gender-affirming surgery—not because minors cannot consent, but because no objective standard yet exists for determining when such surgery is medically necessary."

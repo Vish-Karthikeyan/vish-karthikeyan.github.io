@@ -1,0 +1,113 @@
+# ===========================================================================
+# RESEARCH PAGE  (shown at /research/)
+#
+# The page is a list of sections; each section has a heading and items.
+# Items appear in the order written here. To add a project, copy an existing
+# item (everything from its "- title:" line down to the next "- title:") and
+# edit it. Fields you don't need can simply be deleted.
+#
+# Fields for each item:
+#   title:          Bold title.
+#   title_full:     (optional) Italic text shown after the title, e.g. the
+#                   full name of an acronym.
+#   image:          Thumbnail. Either a full URL (https://...) or a file in
+#                   the repo, e.g. /assets/images/research/my-image.jpg
+#   image_link:     (optional) Where clicking the thumbnail goes. Defaults to
+#                   the image itself.
+#   tile:           (optional) Text shown on a cardinal tile when there is no
+#                   image.
+#   subtitle:       (optional) Grey line under the title (e.g. course name).
+#   supervisors:    (optional) List of { name, url, affiliation }.
+#   description:    Paragraph(s). Markdown allowed: *italic*, **bold**,
+#                   [link text](https://...). Leave a blank line between
+#                   paragraphs.
+#   aims_intro / aims:   (optional) Sentence + list shown as (i), (ii), ...
+#   current_work:   (optional) { title, description }
+#   status:         (optional) Italic grey line, e.g. "Paper forthcoming."
+#   buttons:        (optional) Small buttons: list of { label, url }
+#   center_button:  (optional) One larger centred button at the bottom of the
+#                   box: { label, url }
+#
+# Email links look like:  mailto:vkarthikeyan@stanford.edu?subject=Hello
+# (spaces in the subject are written as %20)
+# ===========================================================================
+
+lede: "Selected research associate engagements, publications, independent projects and interdisciplinary collaborations."
+
+sections:
+
+  # -------------------------------------------------------------------------
+  - heading: "The Stanford Institute for Human-Centered AI"
+    items:
+
+      - title: "Susceptibility of AI Agents to Manipulative Dark Patterns"
+        image: "https://bs-uploads.toptal.io/blackfish-uploads/components/open_graph_image/11387784/og_image/optimized/Final_Dark_Patterns_Social-0d7c9a22d458e53ee2192e75b703fa86.png"
+        supervisors:
+          - { name: "Dr. Jennifer King", url: "https://hai.stanford.edu/people/jennifer-king", affiliation: "Stanford Institute for Human-Centered AI" }
+        description: |
+          As agentic AI capabilities advance rapidly, mundane tasks of everyday life are being outsourced to increasingly autonomous systems that take actions on the user’s behalf. While humans are known both to possess the acumen necessary to identify deceptive marketing tactics and to sometimes fall prey to them, the extent to which proprietary LLM-based agents do the same remains largely unknown. We aim to run a controlled study against a slate of LLMs to quantify their susceptibility to what are known as “dark patterns” in commerce, and to reasonably infer the mechanisms through which they are influenced.
+        status: "Paper forthcoming."
+
+      - title: "Agentic AI and Implications for User Privacy"
+        image: "https://static.east-tec.com/images/b/blog/2024/artificial-intelligence-privacy/artificial-intelligence-privacy.png"
+        supervisors:
+          - { name: "Dr. Jennifer King", url: "https://hai.stanford.edu/people/jennifer-king", affiliation: "Stanford Institute for Human-Centered AI" }
+          - { name: "Dr. A. Feder Cooper", url: "https://afedercooper.info/", affiliation: "Yale University" }
+        description: |
+          One of the key foundations of a citizen’s privacy is the practical obscurity created by fragmented information. Personal data may exist across many sources, but the difficulty of linking and aggregating it provides a meaningful barrier against constructing a comprehensive picture of an individual. However, agentic AI capabilities are deconstructing this paradigm. With the advent of models like GPT-6 Astra and Fable 5.1, we aim to study how effectively autonomous agents can discover, link, and synthesize fragmented public information into detailed profiles of individuals, and what this means for privacy in a world where the cost of aggregation is rapidly approaching zero.
+        status: "Paper forthcoming."
+
+  # -------------------------------------------------------------------------
+  - heading: "Research Groups"
+    items:
+
+      - title: "CIRCUIT"
+        title_full: "Constitutional Inquiry Into Reasoning, Causation, Understanding, Intelligence, and Technology"
+        image: "https://i.insider.com/66bb69f5955b01c3294e0843?width=700"
+        description: |
+          CIRCUIT is a legal research group aiming to advance inquiry into the intersections of constitutional doctrine, theories of causation and agency, and the rapidly evolving capabilities of AI systems.
+        aims_intro: "Through our work, we aspire to:"
+        aims:
+          - "develop rigorous legal and conceptual frameworks for understanding how AI-mediated interactions affect questions of speech, intent, causation, responsibility, autonomy, and state action; and"
+          - "conduct empirical legal analyses to identify how courts apply existing doctrines to technologically novel disputes, and to evaluate whether emerging patterns of judicial reasoning adequately capture the distinctive properties of AI systems."
+        current_work:
+          title: "A Participatory Causation Model of Speech for Conversational AI Liability: Chatbots, Agentic AI and the Future of Human Interaction"
+          description: "I am developing a legal framework for conversational AI liability that examines how a recipient’s independent judgment mediates the relationship between speech and harm. My current draft establishes a participatory causation model and examines its relationship to case law on incitement and communicative assistance. Ongoing work includes empirical testing and extensions to chatbot regulation, product liability, and agentic AI."
+        center_button: { label: "Join", url: "mailto:vkarthikeyan@stanford.edu?subject=Joining%20CIRCUIT" }
+
+      - title: "AERIAL"
+        title_full: "Agentic Emergence, Reasoning, Interaction, Alignment and Language"
+        image: "https://images.wsj.net/im-57452953?width=700&height=513"
+        description: |
+          AERIAL is a multidisciplinary research group comprising students across technical fields from around the world.
+        aims_intro: "Its primary goals are to:"
+        aims:
+          - "understand the properties and behaviors of (societies of) agentic natural-language systems via empirical analyses of model outputs and reasoning traces;"
+          - "investigate how model volition and reasoning emerge through natural-language interaction, how these processes acquire political valence, and when language-mediated reasoning supports or undermines the pursuit of truth; and"
+          - "develop controlled behavioral evaluations, causal interventions on prompts and reasoning traces, and multi-agent experiments to identify the mechanisms underlying the above."
+        current_work:
+          title: "Forthcoming."
+        center_button: { label: "Join", url: "mailto:vkarthikeyan@stanford.edu?subject=Joining%20AERIAL" }
+
+  # -------------------------------------------------------------------------
+  - heading: "Other Work"
+    items:
+
+      - title: "GRAB: GRounding-based, Repository-Aware Boolean Gate — Reducing Hallucinations via Tool Usage Awareness in LLM-based Coding Agents"
+        image: "/assets/images/research/grab-poster-thumb.jpg"
+        image_link: "/assets/projects/GRAB_poster.png"
+        subtitle: "Final project, CS 229: Machine Learning"
+        description: |
+          LLM-based coding agents frequently hallucinate implementation details—incorrect API calls, nonexistent file paths, fabricated configuration keys—when they act under an incomplete context window instead of requesting missing information via tools. We frame tool-use awareness as supervised classification over a repository-level hallucination feature vector and train a constrained XGBoost gate within an iterative refinement loop. On SWE-bench Verified, GRAB reduces hallucination rate from ~50–69% baselines to 44% while maintaining optimal tool efficiency.
+        buttons:
+          - { label: "Report", url: "/assets/projects/GRAB.pdf" }
+          - { label: "Poster", url: "/assets/projects/GRAB_poster.png" }
+
+      - title: "Provable Limits of Expressivity of Transformers"
+        image: "/assets/images/research/cs254-report-thumb.jpg"
+        image_link: "/assets/projects/CS_254_Final_Report.pdf"
+        subtitle: "Final project, CS 254: Computational Complexity"
+        description: |
+          Characterizes the fundamental limits of transformer-based language models, showing that their constant-depth architecture (TC<sup>0</sup>) restricts sequential and compositional reasoning, fails on key language structures, and makes hallucination inevitable—a formal account of transformer limitations set against their strong empirical performance.
+        buttons:
+          - { label: "Report", url: "/assets/projects/CS_254_Final_Report.pdf" }

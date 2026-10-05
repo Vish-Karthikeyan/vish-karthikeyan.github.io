@@ -1,43 +1,42 @@
+# ---------------------------------------------------------------------------
+# Site settings. After editing this file, GitHub Pages rebuilds automatically
+# (allow ~1 minute). See README.md for how to update each page.
+# ---------------------------------------------------------------------------
+
 title: "Vish Karthikeyan"
 author: "Vish Karthikeyan"
-description: "Stanford University | Department of Computer Science | Department of Public Policy"
-permalink: /:title/
+description: "Vish Karthikeyan — Stanford University, Computer Science and Public Policy. Research on agentic AI, technology policy and constitutional law."
+url: "https://vish-karthikeyan.github.io"
 lang: "en"
 encoding: "utf-8"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
+permalink: /:title/
 
-# Layout
+email: "vkarthikeyan@stanford.edu"
+copyright_name: "Vish Karthikeyan"
 
-show_excerpts: false             # show article excerpts instead of archive list on the home page
-show_frame: true                # display a grey frame on large screens
-show_sidebar: false             # show a sidebar instead of the usual header
-show_minimal: false             # remove all clutter
+# Top navigation bar, in order. `url` is the page address.
+navigation:
+  - { title: "Home",                            url: "/" }
+  - { title: "Research",                        url: "/research/" }
+  - { title: "Discourse, Teaching and Service", url: "/discourse/" }
+  - { title: "Writing",                         url: "/writing/" }
 
-#show_frame: "/assets/images/background.svg"
+# Résumé link (right side of the navigation bar). Replace resume.pdf to update.
+resume: "/resume.pdf"
 
-# Menu                          # for available icons see https://fontawesome.com/v5/icons/
-
-navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: Home, sidebaricon: home}
-  - {file: "projects.md", title: Projects, sidebaricon: seedling}
-  - {file: "teaching.md", title: Teaching, sidebaricon: chalkboard-teacher}
-  - {file: "blog.md", title: Blog, sidebaricon: typewriter}
-  - {title: Download Resume, url: "/resume.pdf", sidebaricon: briefcase}
-  
-
-external:                       # accepts {file, title, url, icon, sidebaricon}
-  - {title: Email, icon: envelope, url: "mailto:vkarthikeyan@stanford.edu"}
-  - {title: Github, icon: github, url: "https://github.com/vish-karthikeyan"}
-  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/viswajeeth-karthikeyan/"}
-
-comments:
-#  disqus_shortname: ""         # see https://disqus.com
-#  isso_domain: ""              # see https://isso-comments.de
-
-# Exclude vendor READMEs so the nav finds the root README (About page) only
-exclude:
-  - assets/fontawesome/README.md
+# Icons at the far right of the navigation bar.
+social:
+  github:   "https://github.com/vish-karthikeyan"
+  linkedin: "https://www.linkedin.com/in/viswajeeth-karthikeyan/"
 
 plugins:
- - jekyll-feed
+  - jekyll-feed
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - UNLICENSE.txt
+  - CLAUDE.md
+  - claude.md

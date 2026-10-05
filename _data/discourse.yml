@@ -1,0 +1,102 @@
+# ===========================================================================
+# DISCOURSE, TEACHING AND SERVICE PAGE  (shown at /discourse/)
+#
+# A list of sections; each has a heading and entries, shown in this order.
+# To add an entry, copy an existing one (from its "- title:" line to the next
+# "- title:") and edit it. Delete any optional field you don't need.
+#
+# Fields for each entry:
+#   title:         Entry title.
+#   url:           (optional) Makes the title a link.
+#   title_suffix:  (optional) Unlinked text after the title, e.g. course codes.
+#   image:         (optional) Thumbnail on the left, e.g.
+#                  /assets/images/discourse/my-photo.jpg  (or a full URL)
+#   image_alt:     (optional) Short description of the image.
+#   roles:         (optional) Grey lines under the title, one per role.
+#   quote:         (optional) { text, author, source_title, source_url }
+#   description:   (optional) Paragraph(s). Markdown allowed. Leave a blank
+#                  line between paragraphs.
+#   buttons:       (optional) List of { label, url }.
+#                  Phone links:  tel:+16507233392
+#                  Email links:  mailto:vkarthikeyan@stanford.edu?subject=Hi
+#                  A button with url "#" is shown but goes nowhere (use for
+#                  "coming soon" links).
+# ===========================================================================
+
+lede: "Dialogue across difference, and the people who make institutions humane."
+
+sections:
+
+  # -------------------------------------------------------------------------
+  - heading: "Discourse"
+    entries:
+
+      - title: "The Stanford Political Union"
+        url: "https://www.stanfordpoliticalunion.com/"
+        image: "/assets/images/discourse/spu.jpg"
+        image_alt: "Students in small-group discussion at a Stanford Political Union event"
+        roles:
+          - "Director of Outreach (2024–25); Outreach Committee (2025–present)"
+        quote:
+          text: "The Stanford Political Union, which was defunct for a long time, is thriving. They have a nontraditional format. Rather than hosting debates, they pose a hard question and put the students into small groups to talk and then report out. I love that design."
+          author: "Jonathan Levin, President of Stanford University"
+          source_title: "*Stanford* magazine"
+          source_url: "https://stanfordmag.org/contents/you-have-to-be-able-to-question-orthodoxy"
+        description: |
+          Stanford’s non-partisan forum for constructive political dialogue, founded in 1953. Organized discussions, speaker events and debates featuring former Secretary of Defense Jim Mattis, former Secretary of Health and Human Services Xavier Becerra, former Justice Stephen Breyer, and Andrew Yang, among others.
+
+      - title: "The AI Deliberation Project"
+        image: "/assets/images/discourse/ai-deliberation-project.jpg"
+        image_alt: "The AI Deliberation Project logo"
+        description: |
+          A single hyperscale data center can draw as much water as a small city. Is this climate negligence or anti-progress hysteria? Europe’s binding AI Act proves it takes safety seriously while America gambles. Or is it that the AI Act proves why Europe builds no frontier models while America does? The development, governance, and adoption of AI technologies have been heavily co-opted by politics, leading to polarized conversations on AI governance. Be it the regulation–innovation dichotomy, data center expansion vs. environmental control, or open-source vs. closed AI models, society is divided without much room for respectful discourse, disagreement, and common ground.
+
+          The AI Deliberation Project aspires to change that. We bring together voices across the ideological spectrum to interrogate these tensions rigorously, offering an intellectual hub for students across disciplines to learn more about AI policy issues and distinguish fact from fiction. We aspire to create a multi-partisan AI governance deliberation group where we cut through the sensation and hype in the news, stay up to date on AI governance projects, and engage in thoughtful, evidence-based discussions that challenge assumptions, expose participants to competing viewpoints, and cultivate a more nuanced understanding of the policy choices that will shape the future of AI.
+        buttons:
+          - { label: "Visit website", url: "#" }   # replace "#" with the website address when it's live
+          - { label: "Contact to join", url: "mailto:vkarthikeyan@stanford.edu?subject=Joining%20the%20AI%20Deliberation%20Project" }
+
+  # -------------------------------------------------------------------------
+  - heading: "Teaching"
+    entries:
+
+      - title: "The Bridge Peer Counseling Center"
+        url: "https://web.stanford.edu/group/bridge/"
+        roles:
+          - "Course Coordinator, EDUC 193A and EDUC 193P · 2026–27"
+          - "Teaching Assistant, EDUC 193P · Spring 2026"
+          - "Section Leader, EDUC 193A · Fall 2025, Winter 2026"
+        description: |
+          Amidst a surge in institutional disillusionment, pathological uncertainty and existential dread across the world, unmet mental health needs remain at an all-time high. At [the Bridge Peer Counseling Center](https://web.stanford.edu/group/bridge/), we strive to do best what friends can do—listen. When traditional mental health resources fail to meet the moment for whatever reason, peer counseling offers something fundamentally different—the simple yet profound act of being heard by another human being.
+        buttons:
+          - { label: "Call the Bridge 24/7 · (650) 723-3392", url: "tel:+16507233392" }
+          - { label: "Learn more about EDUC 193A", url: "https://navigator.stanford.edu/classes/1274/1158" }
+          - { label: "Learn more about EDUC 193P", url: "https://navigator.stanford.edu/classes/1274/1196" }
+
+      - title: "Frosh 101"
+        url: "https://frosh101.stanford.edu/"
+        title_suffix: " — UAR 101F, UAR 101V"
+        roles:
+          - "Section Leader · Fall 2024"
+        description: |
+          Your first few months away from home, surrounded by [squirrels that defy biology](https://www.instagram.com/stanfordsquirrels/), LinkedIn connection-maxxers, and a diet rich in microplastics, can be understatedly debilitating. Frosh 101 is a 1-unit discussion seminar for freshmen, taken in their first quarter at Stanford, where they are trained to understand, navigate and appreciate the ups and downs that together make up the collegiate environment.
+
+          As Frosh 101 section leaders, equipped with training on inclusive teaching practices and the impact of mental health, diversity, inclusion and a sense of belonging on learning and thriving, we foster a community that comes together every week to normalize the disorienting, celebrate the awkward, and make space for the real. Frosh 101 feels like an extension of New Student Orientation that every freshman must be a part of.
+
+          I led two sections—one each in Crothers and Lantana. I still see these students around campus, and every single time, it makes me smile knowing I got to be a part of their beginnings here.
+
+  # -------------------------------------------------------------------------
+  - heading: "University Service"
+    entries:
+
+      - title: "Faculty Senate Committee on Undergraduate Admission and Financial Aid (C-UAFA)"
+        roles:
+          - "Student Representative · 2026–27"
+        description: |
+          I serve as one of three undergraduate members of the committee, which advises on institution-wide admission and financial aid policy. Our work spans the criteria and weighting for special-consideration categories, recruitment and outreach to low-income and underrepresented applicants, and the standards governing financial aid—in direct engagement with the Dean of Admission and Financial Aid and senior university administration.
+
+          While committee proceedings are confidential, if you believe there is an issue that must be discussed formally, please [reach out](mailto:vkarthikeyan@stanford.edu).
+
+      - title: "Subcommittee on AI in Undergraduate Admissions"
+        roles:
+          - "Student Representative · 2026–27"

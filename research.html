@@ -1,0 +1,47 @@
+---
+layout: page
+title: Research
+permalink: /research/
+redirect_from:
+  - /projects/
+# Content lives in _data/research.yml
+---
+{% assign data = site.data.research %}
+<p class="page-lede">{{ data.lede }}</p>
+
+{% for section in data.sections %}
+<h2 class="sec">{{ section.heading }}</h2>
+{% for item in section.items %}
+<article class="card">
+  {% if item.image %}
+    {% if item.image contains '://' %}{% assign img = item.image %}{% else %}{% assign img = item.image | relative_url %}{% endif %}
+    {% if item.image_link %}{% if item.image_link contains '://' %}{% assign imglink = item.image_link %}{% else %}{% assign imglink = item.image_link | relative_url %}{% endif %}{% else %}{% assign imglink = img %}{% endif %}
+  <a class="thumb" href="{{ imglink }}"><img src="{{ img }}" alt="" loading="lazy"></a>
+  {% else %}
+  <div class="tile">{{ item.tile | default: item.title }}</div>
+  {% endif %}
+  <div>
+    <h3>{{ item.title }}{% if item.title_full %}: <span class="full">{{ item.title_full }}</span>{% endif %}</h3>
+    {% if item.subtitle %}<p class="meta">{{ item.subtitle }}</p>{% endif %}
+    {% if item.supervisors %}
+    <p class="meta"><span class="label">Supervised by</span> {% for s in item.supervisors %}{% if forloop.last and forloop.length > 1 %}and {% endif %}{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}{% if s.affiliation %}, {{ s.affiliation }}{% endif %}{% unless forloop.last %}{% if forloop.length > 2 %}; {% else %}, {% endif %}{% endunless %}{% endfor %}</p>
+    {% endif %}
+    {% if item.description %}{{ item.description | markdownify }}{% endif %}
+    {% if item.aims %}
+    {% if item.aims_intro %}<p>{{ item.aims_intro }}</p>{% endif %}
+    <ol class="roman">{% for aim in item.aims %}<li>{{ aim }}</li>{% endfor %}</ol>
+    {% endif %}
+    {% if item.current_work %}
+    <div class="current"><span class="label">Current work</span><em>{{ item.current_work.title }}</em>{% if item.current_work.description %}<p class="cw-desc">{{ item.current_work.description }}</p>{% endif %}</div>
+    {% endif %}
+    {% if item.status %}<p class="status">{{ item.status }}</p>{% endif %}
+    {% if item.buttons %}
+    <div class="btns">{% for b in item.buttons %}{% if b.url contains ':' or b.url == '#' %}{% assign burl = b.url %}{% else %}{% assign burl = b.url | relative_url %}{% endif %}<a class="btn sm" href="{{ burl }}">{{ b.label }}</a>{% endfor %}</div>
+    {% endif %}
+  </div>
+  {% if item.center_button %}
+  <div class="btns center"><a class="btn" href="{{ item.center_button.url }}">{{ item.center_button.label }}</a></div>
+  {% endif %}
+</article>
+{% endfor %}
+{% endfor %}

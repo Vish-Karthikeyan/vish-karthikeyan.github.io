@@ -1,0 +1,21 @@
+# ===========================================================================
+# HOME PAGE "UPDATES" CAROUSEL  (embedded LinkedIn posts)
+#
+# Newest first: add new posts at the TOP. Never delete old ones — visitors
+# scroll sideways to see older posts.
+#
+# To add a post:
+#   1. On LinkedIn, open the post → "···" menu → "Embed this post".
+#   2. In the code it gives you, copy only the address inside src="..."
+#      e.g. https://www.linkedin.com/embed/feed/update/urn:li:share:7458072744795217920?collapsed=1
+#   3. Add a new line at the top of the list below:
+#        - embed: "PASTE-THE-ADDRESS-HERE"
+#
+# Note: LinkedIn embeds only display on the live website (or a local server),
+# not when you open an HTML file directly from your computer.
+# ===========================================================================
+
+posts:
+  - embed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7460105991028645888?collapsed=1"
+  - embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7458072744795217920?collapsed=1"
+  - embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7447556241914060800?collapsed=1"

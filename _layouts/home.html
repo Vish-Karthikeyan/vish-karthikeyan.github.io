@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<h1 class="vh">{{ site.title }}</h1>
+<p class="tagline">{{ page.tagline }}</p>
+<p class="roles">{{ page.roles }}</p>
+
+<div class="hero">
+  <figure class="portrait"><img src="{{ page.portrait | relative_url }}" alt="{{ site.title }}" width="640" height="800"></figure>
+  <div>
+    {% for aff in page.affiliations %}
+    <div class="inst" style="border-left-color: {{ aff.bar_color | default: '#8C1515' }}">
+      {% if aff.logo_url %}<a class="inst-logo" href="{{ aff.logo_url }}">{% endif %}<img class="inst-img" src="{{ aff.logo | relative_url }}" alt="{{ aff.logo_alt }}" style="width: {{ aff.logo_width | default: '15rem' }}">{% if aff.logo_url %}</a>{% endif %}
+      <ul class="creds">
+        {% for line in aff.lines %}
+        <li>{% if line.url %}<a href="{{ line.url }}">{{ line.text }}</a>{% else %}{{ line }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    <div class="contact-row">
+      <a class="btn" href="mailto:{{ site.email }}">Contact</a>
+      <span class="addr">{{ site.email | replace: '@', ' [at] ' | replace: '.', ' [dot] ' }}</span>
+    </div>
+  </div>
+</div>
+
+<h2 class="sec">About</h2>
+<div class="bio">
+{{ content }}
+</div>
+
+{% if site.data.updates.posts and site.data.updates.posts.size > 0 %}
+<div class="upd-head">
+  <h2>Updates</h2>
+  <div class="upd-ctl"><button type="button" data-upd="prev" aria-label="Newer updates">‹ Newer</button><button type="button" data-upd="next" aria-label="Older updates">Older ›</button></div>
+</div>
+<div class="upd-track" id="upd-track">
+  {% for p in site.data.updates.posts %}
+  <div class="upd-embed"><iframe src="{{ p.embed }}" title="LinkedIn post" loading="lazy" allowfullscreen></iframe></div>
+  {% endfor %}
+</div>
+{% endif %}

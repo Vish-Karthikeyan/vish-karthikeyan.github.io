@@ -1,0 +1,36 @@
+---
+layout: page
+title: "Discourse, Teaching and Service"
+permalink: /discourse/
+redirect_from:
+  - /teaching/
+# Content lives in _data/discourse.yml
+---
+{% assign data = site.data.discourse %}
+<p class="page-lede">{{ data.lede }}</p>
+
+{% for section in data.sections %}
+<h2 class="sec" id="{{ section.heading | slugify }}">{{ section.heading }}</h2>
+{% for e in section.entries %}
+<div class="entry{% if e.image %} media{% endif %}">
+  {% if e.image %}
+  {% if e.image contains '://' %}{% assign img = e.image %}{% else %}{% assign img = e.image | relative_url %}{% endif %}
+  <a class="thumb" href="{{ img }}"><img src="{{ img }}" alt="{{ e.image_alt | default: e.title }}" loading="lazy"></a>
+  <div>
+  {% endif %}
+    <h3>{% if e.url %}<a href="{{ e.url }}">{{ e.title }}</a>{% else %}{{ e.title }}{% endif %}{{ e.title_suffix }}</h3>
+    {% if e.roles %}<ul class="roles-list">{% for r in e.roles %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+    {% if e.quote %}
+    <blockquote class="pull">
+      <p>“{{ e.quote.text }}”</p>
+      <footer>— {{ e.quote.author }}{% if e.quote.source_title %}, in {% if e.quote.source_url %}<a href="{{ e.quote.source_url }}">{{ e.quote.source_title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>{% else %}{{ e.quote.source_title | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif %}{% endif %}</footer>
+    </blockquote>
+    {% endif %}
+    {% if e.description %}{{ e.description | markdownify }}{% endif %}
+    {% if e.buttons %}
+    <div class="btns">{% for b in e.buttons %}{% if b.url contains ':' or b.url == '#' %}{% assign burl = b.url %}{% else %}{% assign burl = b.url | relative_url %}{% endif %}<a class="btn sm" href="{{ burl }}">{{ b.label }}</a>{% endfor %}</div>
+    {% endif %}
+  {% if e.image %}</div>{% endif %}
+</div>
+{% endfor %}
+{% endfor %}

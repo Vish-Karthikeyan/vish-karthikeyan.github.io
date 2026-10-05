@@ -1,0 +1,27 @@
+---
+layout: page
+title: Writing
+permalink: /writing/
+redirect_from:
+  - /blog/
+# Content lives in _data/writing.yml
+---
+{% assign data = site.data.writing %}
+<p class="page-lede">{{ data.lede | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+
+<h2 class="sec">{{ data.heading }}</h2>
+{% for a in data.articles %}
+<article class="card sm">
+  {% if a.image %}
+  {% if a.image contains '://' %}{% assign img = a.image %}{% else %}{% assign img = a.image | relative_url %}{% endif %}
+  {% if a.url and a.url != '' %}<a class="thumb" href="{{ a.url }}"><img src="{{ img }}" alt="" loading="lazy"></a>{% else %}<div class="thumb"><img src="{{ img }}" alt="" loading="lazy"></div>{% endif %}
+  {% else %}
+  <div class="tile light">{{ a.date }}</div>
+  {% endif %}
+  <div>
+    <h3>{% if a.url and a.url != '' %}<a href="{{ a.url }}">{{ a.title }}</a>{% else %}{{ a.title }}{% endif %}</h3>
+    <p class="meta"><em>{{ a.outlet }}</em> · {{ a.date }}{% if a.series %} · {{ a.series }}{% endif %}</p>
+    {% if a.blurb %}{{ a.blurb | markdownify }}{% endif %}
+  </div>
+</article>
+{% endfor %}

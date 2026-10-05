@@ -1,0 +1,8 @@
+Fonts used on this site (subset to Latin characters, converted to WOFF2):
+
+- Latin Modern Roman 10 (regular, italic, bold, bold italic), Latin Modern Roman 17 and Latin Modern Roman Caps 10
+- TeX Gyre Pagella (regular) — used only for the home-page tagline
+
+Both families are by GUST e-foundry and distributed under the GUST Font License
+(https://www.gust.org.pl/projects/e-foundry/licenses), which permits redistribution
+and modification. The fonts' original names and copyright notices are retained.

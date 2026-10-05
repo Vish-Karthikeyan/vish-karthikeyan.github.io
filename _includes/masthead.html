@@ -1,0 +1,13 @@
+<header class="masthead">
+  <a class="site" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav aria-label="Main">
+    {% for item in site.navigation %}
+    <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    {% endfor %}
+    {% if site.resume %}<a class="cv" href="{{ site.resume | relative_url }}">Résumé&thinsp;↓</a>{% endif %}
+    <span class="icons">
+      {% if site.social.github %}<a href="{{ site.social.github }}" aria-label="GitHub">{% include icon-github.svg %}</a>{% endif %}
+      {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}" aria-label="LinkedIn">{% include icon-linkedin.svg %}</a>{% endif %}
+    </span>
+  </nav>
+</header>

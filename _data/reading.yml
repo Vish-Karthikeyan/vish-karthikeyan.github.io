@@ -1,0 +1,24 @@
+# ===========================================================================
+# READING RECOMMENDATIONS  (hidden page at /reading/, linked only from the
+# word "recommendations" in the home-page bio; not in the navigation, and
+# search engines are asked not to index it)
+#
+# Group books by theme. For each book:
+#   - title:  Book title
+#     author: Author name(s)
+#     why:    One or two sentences on why you recommend it (Markdown allowed)
+#     url:    (optional) Link, e.g. to the publisher or a library page
+#
+# Example (remove the leading "# " characters to use it):
+#
+# themes:
+#   - name: "Computation"
+#     books:
+#       - title: "Gödel, Escher, Bach"
+#         author: "Douglas Hofstadter"
+#         why: "..."
+# ===========================================================================
+
+intro: "Books I keep coming back to, and why."
+
+themes: []

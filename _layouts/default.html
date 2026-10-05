@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}">
-
 {% include head.html %}
-
-<header class="hover smooth">
-  {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  {% endunless %}
-  {% include menu.html menu=site.navigation open_external_in_new_tab=false %}
-  {% include menu.html menu=site.external open_external_in_new_tab=true %}
-</header>
-
+<body>
+<div class="wrap">
+{% include masthead.html %}
+<main>
 {{ content }}
-
-<script>
-  document.querySelectorAll('a[href]:not([target])').forEach(function(a) {
-    var href = a.getAttribute('href');
-    if (!href) return;
-    if (href.indexOf('mailto:') === 0) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener noreferrer'); return; }
-    if (href.indexOf('http://') === 0 || href.indexOf('https://') === 0) {
-      if (a.hostname !== window.location.hostname) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener noreferrer'); }
-    }
-  });
-</script>
-
-{%- if site.footer -%}
-<footer class="hover">
-  <div>{{ site.description }}</div>
-  {% include menu.html menu=site.footer open_external_in_new_tab=false %}
+</main>
+<footer class="site-footer">
+  <span>© {{ site.time | date: "%Y" }} {{ site.copyright_name }}. All rights reserved.</span>
 </footer>
-{%- endif -%}
-
+</div>
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</body>
 </html>
